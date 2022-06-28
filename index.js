@@ -78,19 +78,70 @@
 // --------------------------------------------------------------------------------------------------------
 
 // 05
-const makeItSpongeBob = (string) => {
-    let result = ""
+// const makeItSpongeBob = (string) => {
+//     let result = ""
+
+//     for(let i = 0; i < string.length; i++){
+//         if(i % 2 === 0){
+//             result += string[i].toUpperCase()
+//         }else{
+//             result += string[i].toLowerCase()
+//         }
+//     }
+//     return result
+// }
+
+// let test = makeItSpongeBob("Javascript")
+
+// console.log(test)
+
+// --------------------------------------------------------------------------
+
+// 06
+// const sortLetters = (string) => {
+//     let lowerCaseString = ""
+//     let stringArray = ""
+//     let result = ""
+
+//     for(let i = 0; i < string.length; i++){
+//         lowerCaseString += string[i].toLowerCase()
+//     }
+
+//     stringArray = lowerCaseString.split("")
+//     stringArray.sort()
+//     result = stringArray.join("")
+//     return result
+
+// }
+
+// const essaie = sortLetters("Konexio")
+// console.log(essaie)
+
+// ------------------------------------------------------------------
+
+// 07
+const countEach = (string) => {
+    let numberX = 0
+    let numberO = 0
 
     for(let i = 0; i < string.length; i++){
-        if(i % 2 === 0){
-            result += string[i].toUpperCase()
-        }else{
-            result += string[i].toLowerCase()
+        if(string[i] === "x" || string[i] === "X"){
+            numberX += 1
+        }else if(string[i] === "o" || string[i] === "O"){
+            numberO += 1
         }
     }
-    return result
+
+    if(numberX === 0 &&  numberO === 0){
+        console.log("Votre mot ne contient ni 'X' ni 'O'")
+    }else if(numberX === numberO){
+        return true
+    }else{
+        return false
+    }
 }
 
-let test = makeItSpongeBob("Javascript")
+let test = countEach("mmmommm")
 
 console.log(test)
+
