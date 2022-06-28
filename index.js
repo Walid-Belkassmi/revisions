@@ -82,12 +82,10 @@ const makeItSpongeBob = (string) => {
     let result = ""
 
     for(let i = 0; i < string.length; i++){
-        if(string[i] % 2 === 0){
+        if(i % 2 === 0){
             result += string[i].toUpperCase()
-            console.log(result)
         }else{
             result += string[i].toLowerCase()
-            console.log(result)
         }
     }
     return result
